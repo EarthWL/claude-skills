@@ -1,6 +1,6 @@
 ---
 name: kickoff
-description: Project kickoff orchestrator — at the start of a project or task, lock the scope before any work begins, then route to the right downstream skills. Runs a structured intake (goal, definition of done, constraints, non-goals, risks) scaled to the task size, refuses to start building until scope and success criteria are confirmed, then recommends the matching skills and auto-advances through them — pausing at human gates — currently debug-mantra, scrutinize, post-mortem, management-talk, design-doc, rollout, incident-response. Invoke ONLY when the user explicitly runs /kickoff or asks to kick off, scope, or plan a new project, feature, or task. Do NOT auto-trigger on ordinary requests, quick questions, casual conversation, or small one-line edits.
+description: Project kickoff orchestrator — at the start of a project or task, lock the scope before any work begins, then route to the right downstream skills. Runs a structured intake (goal, definition of done, constraints, non-goals, risks) scaled to the task size, refuses to start building until scope and success criteria are confirmed, then recommends the matching skills and auto-advances through them — pausing at human gates — currently debug-mantra, scrutinize, post-mortem, management-talk, design-doc, rollout, incident-response, tdd. Invoke ONLY when the user explicitly runs /kickoff or asks to kick off, scope, or plan a new project, feature, or task. Do NOT auto-trigger on ordinary requests, quick questions, casual conversation, or small one-line edits.
 ---
 
 # Kickoff
@@ -93,6 +93,7 @@ Map the confirmed scope to the downstream skill(s). Name them explicitly, say wh
 | The work is... | Route to |
 |---|---|
 | Designing how to build something non-trivial, before coding — design doc / RFC / technical design | `design-doc` |
+| Building a feature or fixing a bug test-first — red-green-refactor | `tdd` |
 | Debugging — something is broken, throwing, failing, flaky | `debug-mantra` |
 | Reviewing a plan / PR / diff / design, or a second opinion | `scrutinize` |
 | Writing up a fixed-and-validated bug (RCA / root cause) | `post-mortem` |
