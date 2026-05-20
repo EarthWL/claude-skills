@@ -1,6 +1,6 @@
 ---
 name: kickoff
-description: Project kickoff orchestrator — at the start of a project or task, lock the scope before any work begins, then route to the right downstream skills. Runs a structured intake (goal, definition of done, constraints, non-goals, risks) scaled to the task size, refuses to start building until scope and success criteria are confirmed, then recommends the matching skills and auto-advances through them — pausing at human gates — currently debug-mantra, scrutinize, post-mortem, management-talk, design-doc, rollout, incident-response, tdd, adr. Invoke ONLY when the user explicitly runs /kickoff or asks to kick off, scope, or plan a new project, feature, or task. Do NOT auto-trigger on ordinary requests, quick questions, casual conversation, or small one-line edits.
+description: Project kickoff orchestrator — at the start of a project or task, lock the scope before any work begins, then route to the right downstream skills. Runs a structured intake (goal, definition of done, constraints, non-goals, risks) scaled to the task size, refuses to start building until scope and success criteria are confirmed, then recommends the matching skills and auto-advances through them — pausing at human gates — currently debug-mantra, scrutinize, post-mortem, management-talk, design-doc, rollout, incident-response, tdd, adr, performance. Invoke ONLY when the user explicitly runs /kickoff or asks to kick off, scope, or plan a new project, feature, or task. Do NOT auto-trigger on ordinary requests, quick questions, casual conversation, or small one-line edits.
 ---
 
 # Kickoff
@@ -101,6 +101,7 @@ Map the confirmed scope to the downstream skill(s). Name them explicitly, say wh
 | Reporting work up the org — exec / VP / PM, Slack, email, standup | `management-talk` |
 | Shipping / releasing / deploying a risky change safely — staged rollout, rollback plan | `rollout` |
 | Live production problem — outage, customer-facing breakage, data loss, security incident | `incident-response` |
+| Making something faster / optimizing — measure-first, hit a target number | `performance` |
 
 This table starts small, on purpose, and grows one skill at a time. Other skills (docx, xlsx, pptx, pdf, python, kissflow-*, nocoly-*, schedule, skill-creator, etc.) are **not** routed yet — they get added one at a time, only after each is verified to behave well as a hand-off target.
 

@@ -8,3 +8,4 @@
 - **[tdd](./tdd/SKILL.md)** — Test-driven development, red-green-refactor with vertical-slice tracer bullets; test behavior through public interfaces. (adapted from mattpocock/skills)
 - **[incident-response](./incident-response/SKILL.md)** — Mitigate-first incident discipline: severity, stop the bleeding, roles, timeline; hands off to debug-mantra/post-mortem. (derived from Google SRE + PagerDuty)
 - **[adr](./adr/SKILL.md)** — Architecture Decision Record (MADR): one hard-to-reverse decision — context, options, outcome, consequences; immutable, superseded not edited. `/adr`.
+- **[performance](./performance/SKILL.md)** — Measure-before-optimize: no speed change without target + baseline + profile; biggest contributor first, stop at target, add a regression guard. `/performance`.
