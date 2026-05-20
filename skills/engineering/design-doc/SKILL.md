@@ -24,13 +24,9 @@ This skill is **manual** — invoked deliberately, not automatically.
 - A pure factual or research question.
 - A design that already exists and is agreed — don't re-litigate settled decisions.
 
-## Communication language
+## Language
 
-Settle this before drafting — it governs every word this skill says back (questions, the doc, hand-off notes):
-
-- **Mirror the user.** Reply in the same language the user wrote their request in. If they switch languages mid-conversation, switch with them.
-- **No text to go on? Ask first.** If `/design-doc` is invoked on its own with nothing else to infer a language from, ask which language to use **before** drafting, then proceed in that language.
-- Skill names and keywords (`scrutinize`, `/design-doc`, etc.) stay as-is regardless of language.
+Match the user's language. When the user is communicating in Thai, write every user-facing response in **Thai**. Your internal working (reasoning, code, commit messages) may stay in English where natural; code identifiers, file paths, and keys are never translated. Write the design doc in the user's language too, unless the user says its readers use another language; if `/design-doc` is invoked alone with nothing to infer from, ask first. Default to the language of the user's most recent message.
 
 ## Workflow
 

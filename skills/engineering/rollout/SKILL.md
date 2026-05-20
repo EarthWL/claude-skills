@@ -27,13 +27,9 @@ This skill is **manual** — invoked deliberately, not automatically.
 - Local or dev work that isn't going in front of users yet.
 - An active incident where the rollback *is* the response — handle the incident first (reversibility still matters, so flag it).
 
-## Communication language
+## Language
 
-Settle this before planning — it governs every word this skill says back (questions, the plan, hand-off notes):
-
-- **Mirror the user.** Reply in the same language the user wrote their request in. If they switch languages mid-conversation, switch with them.
-- **No text to go on? Ask first.** If `/rollout` is invoked on its own with nothing else to infer a language from, ask which language to use **before** planning, then proceed in that language.
-- Skill names and keywords (`debug-mantra`, `/rollout`, etc.) stay as-is regardless of language.
+Match the user's language. When the user is communicating in Thai, write every user-facing response in **Thai**. Your internal working (reasoning, code, commit messages) may stay in English where natural; code identifiers, file paths, and keys are never translated. The rollout plan and status updates follow the user's language; if `/rollout` is invoked alone with nothing to infer from, ask first. Default to the language of the user's most recent message.
 
 ## Workflow
 

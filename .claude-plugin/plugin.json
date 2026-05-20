@@ -8,6 +8,7 @@
     "./skills/engineering/design-doc",
     "./skills/engineering/rollout",
     "./skills/engineering/tdd",
+    "./skills/engineering/incident-response",
     "./skills/productivity/management-talk"
   ]
 }
