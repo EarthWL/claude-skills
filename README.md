@@ -24,6 +24,7 @@ Each skill is a directory under `skills/<bucket>/<name>/` with a `SKILL.md` (YAM
 | [scrutinize](./skills/engineering/scrutinize/SKILL.md) | `/scrutinize` | Outsider-perspective review of a plan/PR/change — questions intent, traces the real code path, verifies the change does what it claims. | upstream |
 | [design-doc](./skills/engineering/design-doc/SKILL.md) | `/design-doc` | Google design-doc / RFC discipline — problem → goals/non-goals → alternatives (including doing nothing) → tradeoffs, before any code. | **EarthWL** |
 | [rollout](./skills/engineering/rollout/SKILL.md) | `/rollout` | Progressive rollout & blast-radius discipline — staged plan, tested rollback, abort criteria defined up front. Works for code and low-code/workflow changes. | **EarthWL** |
+| [tdd](./skills/engineering/tdd/SKILL.md) | auto · `/tdd` | Test-driven development with a red-green-refactor loop and vertical-slice tracer bullets; tests verify behavior through public interfaces, not implementation. | mattpocock |
 
 **Productivity**
 
@@ -54,7 +55,7 @@ List every `SKILL.md` in the repo:
 
 ### Credits
 
-Built on [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) by [@thananon](https://github.com/thananon) (9arm). `debug-mantra`, `post-mortem`, `scrutinize`, and `management-talk` originate upstream. `kickoff`, `design-doc`, and `rollout` are added in this repo.
+Built on [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) by [@thananon](https://github.com/thananon) (9arm). `debug-mantra`, `post-mortem`, `scrutinize`, and `management-talk` originate upstream. `kickoff`, `design-doc`, and `rollout` are added in this repo. `tdd` is adapted from [`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT © 2026 Matt Pocock).
 
 ---
 
@@ -73,6 +74,7 @@ Built on [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) by [@
 | [scrutinize](./skills/engineering/scrutinize/SKILL.md) | `/scrutinize` | รีวิวแบบคนนอก — ตั้งคำถามว่าจำเป็นไหม/มีทางง่ายกว่าไหม แล้วไล่ code path จริงเพื่อยืนยันว่าทำได้ตามที่อ้าง | upstream |
 | [design-doc](./skills/engineering/design-doc/SKILL.md) | `/design-doc` | วินัย design-doc/RFC สไตล์ Google — problem → goals/non-goals → ทางเลือก (รวม "ไม่ทำอะไรเลย") → tradeoffs ก่อนลงโค้ด | **EarthWL** |
 | [rollout](./skills/engineering/rollout/SKILL.md) | `/rollout` | วินัย progressive rollout — แผนปล่อยทีละขั้น, ทาง rollback, abort criteria กำหนดล่วงหน้า ใช้ได้ทั้งโค้ดและ low-code/workflow | **EarthWL** |
+| [tdd](./skills/engineering/tdd/SKILL.md) | อัตโนมัติ · `/tdd` | TDD แบบ red-green-refactor ทีละ vertical slice; เทสต์ตรวจพฤติกรรมผ่าน public interface ไม่ผูกกับ implementation | mattpocock |
 
 **Productivity (งานเวิร์กโฟลว์)**
 
@@ -103,4 +105,4 @@ Built on [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) by [@
 
 ### เครดิต / ต้นทาง
 
-พัฒนาต่อยอดจาก [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) โดย [@thananon](https://github.com/thananon) (9arm) — `debug-mantra`, `post-mortem`, `scrutinize`, `management-talk` มาจาก upstream ส่วน `kickoff`, `design-doc`, `rollout` เพิ่มเข้ามาใน repo นี้
+พัฒนาต่อยอดจาก [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) โดย [@thananon](https://github.com/thananon) (9arm) — `debug-mantra`, `post-mortem`, `scrutinize`, `management-talk` มาจาก upstream ส่วน `kickoff`, `design-doc`, `rollout` เพิ่มเข้ามาใน repo นี้ ส่วน `tdd` ปรับมาจาก [`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT © 2026 Matt Pocock)

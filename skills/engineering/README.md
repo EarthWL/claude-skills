@@ -5,3 +5,4 @@
 - **[scrutinize](./scrutinize/SKILL.md)** — Outsider-perspective end-to-end review of a plan, PR, or code change.
 - **[design-doc](./design-doc/SKILL.md)** — Google design-doc / RFC discipline. Problem → goals/non-goals → alternatives → tradeoffs before any code. `/design-doc`.
 - **[rollout](./rollout/SKILL.md)** — Progressive rollout & blast-radius discipline: staged plan, tested rollback, abort criteria up front. `/rollout`.
+- **[tdd](./tdd/SKILL.md)** — Test-driven development, red-green-refactor with vertical-slice tracer bullets; test behavior through public interfaces. (adapted from mattpocock/skills)

@@ -7,6 +7,7 @@
     "./skills/engineering/scrutinize",
     "./skills/engineering/design-doc",
     "./skills/engineering/rollout",
+    "./skills/engineering/tdd",
     "./skills/productivity/management-talk"
   ]
 }
