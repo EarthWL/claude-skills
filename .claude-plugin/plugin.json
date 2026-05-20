@@ -1,9 +1,12 @@
 {
   "name": "9arm-skills",
   "skills": [
+    "./skills/productivity/kickoff",
     "./skills/engineering/debug-mantra",
     "./skills/engineering/post-mortem",
     "./skills/engineering/scrutinize",
+    "./skills/engineering/design-doc",
+    "./skills/engineering/rollout",
     "./skills/productivity/management-talk"
   ]
 }

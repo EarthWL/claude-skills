@@ -36,9 +36,12 @@ List every `SKILL.md` in the repo:
 - **[debug-mantra](./skills/engineering/debug-mantra/SKILL.md)** — Four-mantra debugging discipline: reproduce → trace the fail path → falsify the hypothesis → cross-reference every breadcrumb. Recites verbatim at session start, then applies in order before any fix.
 - **[post-mortem](./skills/engineering/post-mortem/SKILL.md)** — Write the canonical engineering record of a fixed bug — root cause, mechanism, fix, validation, how it slipped through. Engineer-audience; refuses to draft without a reliable repro, known cause, and validated fix.
 - **[scrutinize](./skills/engineering/scrutinize/SKILL.md)** — Outsider-perspective end-to-end review of a plan, PR, or code change. Questions intent (is there a simpler way?), traces the actual code path, and verifies the change does what it claims. Output is concise, actionable, with rationale.
+- **[design-doc](./skills/engineering/design-doc/SKILL.md)** — Google design-doc / RFC discipline. Forces problem → goals/non-goals → alternatives (including doing nothing) → chosen approach → tradeoffs before any code; refuses to propose a solution until the problem and real alternatives are on the page. `/design-doc`.
+- **[rollout](./skills/engineering/rollout/SKILL.md)** — Progressive rollout & blast-radius discipline. Before shipping a risky change, requires a staged plan, a tested rollback, and abort criteria defined up front; works for code deploys and low-code / workflow changes. `/rollout`.
 
 ### Productivity
 
+- **[kickoff](./skills/productivity/kickoff/SKILL.md)** — Project kickoff orchestrator. Locks scope (goal, definition of done, non-goals) before any work — scaled to task size — then routes to the right downstream skill. `/kickoff`.
 - **[management-talk](./skills/productivity/management-talk/SKILL.md)** — Rewrite engineer-to-engineer content for engineering-org leadership and shape it for the channel it's going to (JIRA, Slack, async standup, email, meeting talking-points).
 
 ### Misc
