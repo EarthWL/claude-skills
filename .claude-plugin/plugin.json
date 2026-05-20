@@ -6,6 +6,7 @@
     "./skills/engineering/post-mortem",
     "./skills/engineering/scrutinize",
     "./skills/engineering/design-doc",
+    "./skills/engineering/adr",
     "./skills/engineering/rollout",
     "./skills/engineering/tdd",
     "./skills/engineering/incident-response",

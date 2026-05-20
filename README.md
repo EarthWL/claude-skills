@@ -26,6 +26,7 @@ Each skill is a directory under `skills/<bucket>/<name>/` with a `SKILL.md` (YAM
 | [rollout](./skills/engineering/rollout/SKILL.md) | `/rollout` | Progressive rollout & blast-radius discipline — staged plan, tested rollback, abort criteria defined up front. Works for code and low-code/workflow changes. | **EarthWL** |
 | [tdd](./skills/engineering/tdd/SKILL.md) | auto · `/tdd` | Test-driven development with a red-green-refactor loop and vertical-slice tracer bullets; tests verify behavior through public interfaces, not implementation. | mattpocock |
 | [incident-response](./skills/engineering/incident-response/SKILL.md) | auto · `/incident-response` | Live-incident discipline — mitigate first, diagnose later: declare severity, stop the bleeding, assign roles, keep a timeline, then hand off to debug-mantra and post-mortem. | **EarthWL** |
+| [adr](./skills/engineering/adr/SKILL.md) | `/adr` | Architecture Decision Record (MADR) — capture one hard-to-reverse decision with context, options + pros/cons, outcome, and consequences; immutable once accepted, superseded rather than edited. | **EarthWL** |
 
 **Productivity**
 
@@ -56,7 +57,7 @@ List every `SKILL.md` in the repo:
 
 ### Credits
 
-Built on [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) by [@thananon](https://github.com/thananon) (9arm). `debug-mantra`, `post-mortem`, `scrutinize`, and `management-talk` originate upstream. `kickoff`, `design-doc`, and `rollout` are added in this repo. `tdd` is adapted from [`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT © 2026 Matt Pocock). `incident-response` is derived from [Google SRE](https://sre.google/sre-book/managing-incidents/) and [PagerDuty Incident Response](https://response.pagerduty.com/).
+Built on [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) by [@thananon](https://github.com/thananon) (9arm). `debug-mantra`, `post-mortem`, `scrutinize`, and `management-talk` originate upstream. `kickoff`, `design-doc`, and `rollout` are added in this repo. `tdd` is adapted from [`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT © 2026 Matt Pocock). `incident-response` is derived from [Google SRE](https://sre.google/sre-book/managing-incidents/) and [PagerDuty Incident Response](https://response.pagerduty.com/). `adr` follows [Michael Nygard's ADR](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) and the [MADR](https://adr.github.io/madr/) template.
 
 ---
 
@@ -77,6 +78,7 @@ Built on [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) by [@
 | [rollout](./skills/engineering/rollout/SKILL.md) | `/rollout` | วินัย progressive rollout — แผนปล่อยทีละขั้น, ทาง rollback, abort criteria กำหนดล่วงหน้า ใช้ได้ทั้งโค้ดและ low-code/workflow | **EarthWL** |
 | [tdd](./skills/engineering/tdd/SKILL.md) | อัตโนมัติ · `/tdd` | TDD แบบ red-green-refactor ทีละ vertical slice; เทสต์ตรวจพฤติกรรมผ่าน public interface ไม่ผูกกับ implementation | mattpocock |
 | [incident-response](./skills/engineering/incident-response/SKILL.md) | อัตโนมัติ · `/incident-response` | วินัยรับมือเหตุสด — mitigate first, diagnose later: ประกาศ severity, หยุดเลือด, มอบ role, จด timeline แล้วส่งต่อ debug-mantra/post-mortem | **EarthWL** |
+| [adr](./skills/engineering/adr/SKILL.md) | `/adr` | Architecture Decision Record (MADR) — บันทึก 1 decision ที่ย้อนยาก: context, ตัวเลือก+pros/cons, outcome, consequences; accepted แล้วห้ามแก้ ใช้ supersede แทน | **EarthWL** |
 
 **Productivity (งานเวิร์กโฟลว์)**
 
@@ -107,4 +109,4 @@ Built on [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) by [@
 
 ### เครดิต / ต้นทาง
 
-พัฒนาต่อยอดจาก [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) โดย [@thananon](https://github.com/thananon) (9arm) — `debug-mantra`, `post-mortem`, `scrutinize`, `management-talk` มาจาก upstream ส่วน `kickoff`, `design-doc`, `rollout` เพิ่มเข้ามาใน repo นี้ ส่วน `tdd` ปรับมาจาก [`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT © 2026 Matt Pocock) และ `incident-response` กลั่นจาก Google SRE + PagerDuty Incident Response
+พัฒนาต่อยอดจาก [`thananon/9arm-skills`](https://github.com/thananon/9arm-skills) โดย [@thananon](https://github.com/thananon) (9arm) — `debug-mantra`, `post-mortem`, `scrutinize`, `management-talk` มาจาก upstream ส่วน `kickoff`, `design-doc`, `rollout` เพิ่มเข้ามาใน repo นี้ ส่วน `tdd` ปรับมาจาก [`mattpocock/skills`](https://github.com/mattpocock/skills) (MIT © 2026 Matt Pocock) และ `incident-response` กลั่นจาก Google SRE + PagerDuty Incident Response และ `adr` ยึดแนว Nygard ADR + MADR
