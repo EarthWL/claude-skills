@@ -63,3 +63,11 @@ Close with a one-line verdict: ship / fix-then-ship / rework / reject — with t
 - **One simpler-alternative pass is mandatory.** Even on small changes, spend one breath asking if the whole thing is necessary. Skip only if the user explicitly says "don't question scope."
 - **Don't pad with style nits when there's a structural problem.** If step 1 or step 2 surfaces a real issue, lead with it; defer nits or drop them.
 - **No flattery, no hedging.** "This is a great PR but..." adds nothing. State the finding.
+
+## Language
+
+Match the user's language. When the user is communicating in Thai, write
+the whole review — intent, the simpler-alternative pass, every finding,
+the verdict — in **Thai**. `file:line` citations, identifiers, and code
+snippets stay verbatim. Your internal tracing may be in English. Default
+to the language of the user's most recent message.

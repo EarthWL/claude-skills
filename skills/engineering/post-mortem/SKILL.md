@@ -153,3 +153,13 @@ What this post-mortem does that the management-talk version didn't:
 - **State validation coverage honestly.** If you only tested one config, say so. Implying broader coverage is the failure mode that breeds repeat regressions.
 - **Get sign-off before posting to JIRA.** Print-only output needs no approval. Never post to non-JIRA destinations from this skill.
 - **One iteration is normal, three is a smell.** If the user is still revising on the third pass, ask what specific section is wrong — don't keep tweaking blindly.
+
+## Language
+
+Match the user's language. When the user is communicating in Thai, conduct
+the conversation in **Thai** and write the post-mortem record in Thai too —
+unless the user says the destination/team reads another language. **Engineering
+identifiers are never translated**: function names, file paths, struct fields,
+commit SHAs, JIRA keys, PR numbers, test names stay verbatim. Your internal
+working may be in English. Default to the language of the user's most recent
+message.

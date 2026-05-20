@@ -171,3 +171,13 @@ What changed between channels: same diagnosis, same owner, same next step. JIRA 
 - **Get sign-off before posting to JIRA.** Reuse the jira-check approval flow. Print-only output needs no approval.
 - **Never post to Slack, email, or any non-JIRA channel from this skill.** Hand the draft to the user; they post it.
 - **Stay out of advocacy.** This skill produces a status update, not a recommendation. If the user wants a recommendation memo, confirm before reframing.
+
+## Language
+
+Match the user's language. When the user is communicating in Thai, conduct
+the conversation in **Thai**. Write the deliverable in the language the
+**target audience** reads: when the user is working in Thai, default the
+rewrite to Thai; if the leadership channel is known to use another language,
+ask or follow that. Product/framework names, JIRA keys, PR numbers, and
+workload identifiers stay verbatim regardless of language. Default to the
+language of the user's most recent message.

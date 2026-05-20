@@ -73,3 +73,14 @@ Maintain a running **ledger** of every experiment in this session. Each entry: w
   - Do not declare a hypothesis correct until #4 confirms it against every prior breadcrumb.
 - If you catch yourself proposing a fix without a reliable repro, stop and return to step 1.
 - The mantra is a constraint **you** carry through the session — not advice to deliver back to the user.
+
+## Language
+
+Match the user's language. When the user is communicating in Thai, write
+every user-facing response — framing, analysis, hypotheses, findings, the
+fix explanation — in **Thai**. Your internal working (reasoning, code, the
+breadcrumb ledger, commit messages) may stay in English where that's
+natural; code identifiers are never translated. The mantra recital itself
+stays **verbatim** (it's a fixed checklist) — present it as-is, then run
+the rest of the session in the user's language. Default to the language of
+the user's most recent message.
