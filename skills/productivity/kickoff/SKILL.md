@@ -1,6 +1,6 @@
 ---
 name: kickoff
-description: Project kickoff orchestrator — at the start of a project or task, lock the scope before any work begins, then route to the right downstream skills. Runs a structured intake (goal, definition of done, constraints, non-goals, risks) scaled to the task size, refuses to start building until scope and success criteria are confirmed, then recommends and hands off to the matching skills (currently debug-mantra, scrutinize, post-mortem, management-talk, design-doc, rollout). Invoke ONLY when the user explicitly runs /kickoff or asks to kick off, scope, or plan a new project, feature, or task. Do NOT auto-trigger on ordinary requests, quick questions, casual conversation, or small one-line edits.
+description: Project kickoff orchestrator — at the start of a project or task, lock the scope before any work begins, then route to the right downstream skills. Runs a structured intake (goal, definition of done, constraints, non-goals, risks) scaled to the task size, refuses to start building until scope and success criteria are confirmed, then recommends the matching skills and auto-advances through them — pausing at human gates — currently debug-mantra, scrutinize, post-mortem, management-talk, design-doc, rollout. Invoke ONLY when the user explicitly runs /kickoff or asks to kick off, scope, or plan a new project, feature, or task. Do NOT auto-trigger on ordinary requests, quick questions, casual conversation, or small one-line edits.
 ---
 
 # Kickoff
@@ -85,7 +85,7 @@ Produce a short, scannable summary the user can correct:
 - **Goal** (one sentence)
 - **Done when** (the success criteria)
 - **Out of scope** (non-goals)
-- **Plan** (the task list — create it with the task tools so progress is trackable)
+- **Plan** (the task list — create it with the task tools. Bake the downstream pipeline in as tasks, e.g. design → build → review → ship, and mark which ones are human gates. This list is the pipeline state that drives auto-advance in step 6.)
 - **Risks** (only real ones; don't manufacture them)
 
 Get an explicit "yes, go" before moving on. One round of correction is normal.
@@ -107,14 +107,51 @@ This table starts small, on purpose, and grows one skill at a time. Other skills
 
 If the work falls outside the routed skills above, do it directly with the base tools — do not force-fit it onto a core skill. If two or more match, sequence them (e.g. `design-doc` → `scrutinize` → build → `rollout`, or debug → fix → `post-mortem` → `management-talk`) and say so.
 
-### 6. Hand off
+### 6. Hand off and auto-advance
 
-State the plan in one line — "Scope locked. Routing to X, then Y." — and begin. From here, the downstream skill owns the execution.
+State the plan in one line — "Scope locked. Routing to X, then Y." — and begin.
+
+Then walk the task list **automatically**: when one step completes, advance to the next routed step and invoke its skill *without waiting for a new command*. Build finishing should flow straight into `scrutinize`; a validated fix should flow into `post-mortem`. The task list is the pipeline state — keep it updated as you go.
+
+**Pause and wait for an explicit OK at human gates only:**
+
+- Scope confirmation (step 3) — already cleared before any build.
+- Before building from a design — let the user approve the design and any `scrutinize` findings first.
+- `rollout` go/no-go — the rollout gate needs the user to set abort criteria and approve exposure.
+- Any irreversible or destructive action.
+- Posting anything externally (JIRA via `post-mortem` / `management-talk`) — those carry their own sign-off.
+
+Between gates, advance on your own. At a gate, stop, state what's next, and wait. If the user says "step through manually," switch auto-advance off and confirm before each step instead.
+
+### 7. Re-plan mid-flight
+
+The plan is a hypothesis, not a contract. Auto-advance does not mean head-down — when a step's outcome contradicts the plan, stop advancing and re-plan before continuing.
+
+**Re-plan when:**
+
+- A step's result invalidates downstream tasks — `scrutinize` finds the approach is wrong, a chosen design alternative turns out infeasible, a build uncovers a blocker.
+- A new requirement, constraint, or risk appears.
+- The user changes direction.
+
+**Re-plan loop:**
+
+1. Stop auto-advance — re-planning is itself a pause.
+2. Name what changed and which downstream tasks it invalidates.
+3. Pick the loop-back point — back to `design-doc` (the how), back to the `kickoff` intake (the scope), or just add / drop / reorder tasks in place.
+4. Update the task list so it reflects the new plan — it is the pipeline state.
+5. Resume auto-advance from the corrected point.
+
+**Guardrails:**
+
+- **Small in-scope adjustment** → update the tasks and keep going. **Scope or non-goals change** → that's a gate: get the user's OK before widening. Silent scope creep is the failure mode.
+- **Thrash guard** — if the plan changes more than about three times, stop tweaking and re-run the intake properly. The scope was wrong, not the tasks.
 
 ## Operating rules
 
 - **Match the user's language.** Communicate in whatever language the user wrote in; if `/kickoff` arrives with no text to infer from, ask which language first and wait for the answer.
 - **Scope before build, always.** No files, no code, no multi-tool execution before step 3's gate is satisfied.
+- **Auto-advance between steps, stop at gates.** Once scope is locked, flow from one routed step to the next without waiting for a new command — but never blow through a human gate (build-from-design approval, `rollout` go/no-go, irreversible actions, external posting).
+- **The plan is a hypothesis.** Re-plan the moment a step contradicts it — loop back, update the task list, resume. A scope change is always a gate, and chronic re-planning means re-scope, not re-tweak.
 - **Depth matches size.** A small task gets one sentence of scoping, not an interrogation. Over-scoping a tiny task is as much a failure as under-scoping a big one.
 - **Name non-goals.** The single most valuable line in any kickoff is what you are *not* doing. Always surface it.
 - **Route, don't hoard.** This skill conducts; it doesn't perform. Hand the actual work to the specialist skill and get out of the way.
